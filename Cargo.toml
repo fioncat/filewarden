@@ -8,3 +8,17 @@ name = "fwd"
 path = "src/main.rs"
 
 [dependencies]
+aes-gcm = "^0"
+anyhow = "^1"
+base64 = "^0"
+pbkdf2 = "^0"
+sha2 = "^0"
+
+[build-dependencies]
+simple-error = "^0"
+vergen = { version = "^9", features = ["build", "rustc", "cargo", "si"] }
+
+[profile.release]
+lto = true
+strip = true
+incremental = false
