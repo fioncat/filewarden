@@ -8,3 +8,23 @@ name = "fwd"
 path = "src/main.rs"
 
 [dependencies]
+aes-gcm = "^0"
+anyhow = "^1"
+base64 = "^0"
+clap = { version = "^4", features = ["derive"] }
+console = "^0"
+dialoguer = "^0"
+dirs = "^6"
+pbkdf2 = "^0"
+rpassword = "^7"
+sha2 = "^0"
+termion = "^4"
+
+[build-dependencies]
+simple-error = "^0"
+vergen = { version = "^9", features = ["build", "rustc", "cargo", "si"] }
+
+[profile.release]
+lto = true
+strip = true
+incremental = false
